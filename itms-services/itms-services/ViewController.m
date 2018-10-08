@@ -22,14 +22,14 @@
 //    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
 //    [self.view addSubview:self.webView];
 //
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"test.html" ofType:nil];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"test.html" ofType:nil];
 //
 //    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]]];
 }
 
 - (IBAction)clickDown:(id)sender {
     
-    NSString *url = @"https://github.com/lxj916904395/itms-services/blob/master/btc.plist";
+    NSString *url = @"itms-services://?action=download-manifest&url=https://github.com/lxj916904395/itms-services/blob/master/btc.plist";
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{} completionHandler:nil];
 }
